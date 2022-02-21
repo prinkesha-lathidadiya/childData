@@ -7,7 +7,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class ParenttComponent implements OnInit {
   // @Output() child1Update = new EventEmitter<string>()
-  data = { color: 'red', child: 'child1', };
+  data = { color: 'red', child: 'child1', 
+           };
   value: string = '';
 
   red: string = 'red';
@@ -16,7 +17,7 @@ export class ParenttComponent implements OnInit {
   pink: string = 'pink';
   message: string = '';
   me: string = '';
-  child1: string = 'child1';
+  child1: string = '';
   child2: string = 'child2';
   child3: string = 'child3';
   child4: string = 'child4';
@@ -24,6 +25,7 @@ export class ParenttComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.child1='hello';
   }
   // changed(evt: any) {
   //   this.value = evt.target.checked;
@@ -59,5 +61,16 @@ export class ParenttComponent implements OnInit {
     // this.value = this.child4
     console.log(this.value);
   }
+
+  // cheak(){
+  //   if(this.ng){
+
+  //   }
+  // }
+
+  // updateChild2($event: any) {
+  //   this.message = $event
+  // }
+
 
 }

@@ -5,28 +5,32 @@
             <button type="button" class="btn bttn grey" name="grey" [value]="value" (click)="changed2()"></button>
             <br>
             <button type="button" class="btn bttn yellow" name="yellow" [value]="value" (click)="changed3()"></button>
-            <button type="button" class="btn bttn pink" name="pink" [value]="value" (click)="changed4()"></button>
+            <button type="button" class="btn bttn pink" name="pink" [value]="value" (click)="changed4()"></button>  
         </div>
         <div class="span_m">
             <span>Seleted Color:{{value}}</span>
         </div>
         <div>
             <label for="website">Child:</label>
-            <select (change)="check($event)">
-                <option>Choose Child</option>
+            <select>
+                <!-- <option>Choose Child</option>
                 <option [(ngModel)]="child1"> Child1</option>
-                <option [(ngModel)]="child2" > Child2</option>
+                <option [(ngModel)]="child2"> Child2</option>
                 <option [(ngModel)]="child3"> Child3</option>
-                <option [(ngModel)]="child4"> Child4</option>
+                <option [(ngModel)]="child4"> Child4</option> -->
+                <option>Choose Child</option>
+                <option> Child1</option>
+                <option> Child2</option>
+                <option> Child3</option>
+                <option> Child4</option>
             </select>
-        </div>
-        <input type="text" [(ngModel)]="message">
-        <br>
-        <input type="text">
-    </div>
+        </div>      
+    </div> 
+  
     <div>
-        <app-child1 [child1]="message"></app-child1>
-        <app-child2 [child2]="message"></app-child2>
-        <app-child3 [child3]="message"></app-child3>
-        <app-child4 [child4]="message"></app-child4>
+        <app-child1 [child1]="child1"></app-child1>
+        <app-child2 [child2]="child2"></app-child2>
+        <app-child3 [child3]="child3"></app-child3>
+        <app-child4 [child4]="child4"></app-child4> 
     </div>
+

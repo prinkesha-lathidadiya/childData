@@ -1,18 +1,19 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child1',
   templateUrl: './child1.component.html',
   styleUrls: ['./child1.component.css']
 })
-export class Child1Component implements OnInit {
+export class Child1Component implements OnInit, AfterViewInit {
   // @Input() updateChild1 = new EventEmitter<string>()
   @Input() child1: string = '';
 
-  message: string = ''
+  message: string = 'hujhuh'
   constructor() { }
 
   ngOnInit(): void {
+    this.child1='yggytgfyt';
   }
   // updateChild1($event: any) {
   //   this.message = $event
@@ -20,5 +21,5 @@ export class Child1Component implements OnInit {
   // updateParent($event: any) {
   //   this.child1Update.emit($event)
   // }
-
+  ngAfterViewInit(): void {}
 }
