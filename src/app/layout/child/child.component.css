@@ -1,0 +1,14 @@
+.bttn{
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+.total_value{
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 271px;
+    padding: 3px 5px;
+}

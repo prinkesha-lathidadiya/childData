@@ -1,0 +1,9 @@
+.total_value{
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 194px;
+    padding: 3px 5px;
+}
+

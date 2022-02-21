@@ -1,0 +1,37 @@
+.bttn{
+    font-size: 21px;
+    border: none;
+    padding: 26px 148px;
+    margin-bottom: 5px;
+}
+.parent_main{
+    width: 30%;
+}
+.red{
+    background-color: indianred;
+    color: white;
+    /* margin-right: 80px; */
+  
+}
+.grey{
+    background-color: grey;
+    color: white;
+   
+}
+.pink{
+    background-color: rgb(255,189,222);
+    color: white;
+   
+}
+.yellow{
+    background-color: #ffc252;
+    color: white;
+    /* margin-right: 80px; */
+}
+.span_m{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.main{
+    display: flex;
+}

@@ -1,0 +1,15 @@
+<h2>  Parent Component </h2>
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Number1" (input)="getTotalAmt()" [(ngModel)]="num1" name="num1"id="num1" />
+</div>
+<div class="form-group">
+    <input class="form-control" placeholder="Number2" type="text" (input)="getTotalAmt()" [(ngModel)]="num2" name="num2" id="num2" />
+</div>
+<p class="total_value">Total Num of Value - {{Total}}</p>  
+<br>
+
+<hr>
+<app-child [Addition]="Total"  (valueUpdate)="getUpdatedvalue($event)"></app-child> 
+
+
+
