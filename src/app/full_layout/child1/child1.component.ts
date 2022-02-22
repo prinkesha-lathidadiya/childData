@@ -1,25 +1,37 @@
-import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-child1',
   templateUrl: './child1.component.html',
   styleUrls: ['./child1.component.css']
 })
-export class Child1Component implements OnInit, AfterViewInit {
-  // @Input() updateChild1 = new EventEmitter<string>()
-  @Input() child1: string = '';
+export class Child1Component implements OnInit, AfterViewInit, OnChanges {
+ 
+  @Input() DataValue: any = {};
 
-  message: string = 'hujhuh'
   constructor() { }
 
   ngOnInit(): void {
-    this.child1='yggytgfyt';
   }
-  // updateChild1($event: any) {
-  //   this.message = $event
-  // }
-  // updateParent($event: any) {
-  //   this.child1Update.emit($event)
-  // }
-  ngAfterViewInit(): void {}
+  ngAfterViewInit(): void {
+
+
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if(this.DataValue && this.DataValue != ""){
+      this.SetColor();
+    }
+   
+  }
+
+  SetColor(){
+    let emement : any= document.getElementById('c1');
+    if(this.DataValue.child == 'child-1'){
+      emement.style.backgroundColor = this.DataValue.color;
+    }
+    else{
+      emement.style.backgroundColor = 'transparent';
+    } 
+  }
 }

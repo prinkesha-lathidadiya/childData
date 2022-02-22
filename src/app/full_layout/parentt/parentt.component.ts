@@ -6,42 +6,29 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./parentt.component.css']
 })
 export class ParenttComponent implements OnInit {
-  // @Output() child1Update = new EventEmitter<string>()
-  data = { color: 'red', child: 'child1', 
-           };
   value: string = '';
-
   red: string = 'red';
   gray: string = 'gray';
   yellow: string = 'yellow';
   pink: string = 'pink';
-  message: string = '';
-  me: string = '';
-  child1: string = '';
-  child2: string = 'child2';
-  child3: string = 'child3';
-  child4: string = 'child4';
+  data1 = {};
+  data = {};
 
-  constructor() { }
+  isChildShow = true;
+  selectChild = '';
+  inputData1: string = ''
+  inputData2: string = ''
+  inputData3: string = ''
+  inputData4: string = ''
+
+  constructor() {
+    // this.service.child1.subscribe((res: any) => {
+    //   this.data = res
+    // })
+  }
 
   ngOnInit(): void {
-    this.child1='hello';
   }
-  // changed(evt: any) {
-  //   this.value = evt.target.checked;
-  //   // alert(evt.target.checked)
-  //   if (evt.target.checked) {
-  //     this.userList.map((e) => {
-  //       e.select = true;
-  //     })
-  //   }
-  //   else {
-  //     this.userList.map((e) => {
-  //       e.select = false;
-  //     })
-  //   }
-  // }
-
   changed1() {
     this.value = this.red;
   }
@@ -54,23 +41,35 @@ export class ParenttComponent implements OnInit {
   changed4() {
     this.value = 'pink';
   }
-  check(e:any){
-    // this.value = this.child1;
-    // this.value = this.child2;
-    // this.value = this.child3;
-    // this.value = this.child4
-    console.log(this.value);
+  changeValue($event: any) {
+    const value = $event.target.value;
+    this.selectChild = $event.target.value;
+    // switch (value) {
+    //   case 'child-1':
+    //     this.inputData1 = value
+    //     break;
+    //   case 'child-2':
+    //     this.inputData2 = value
+    //     break;
+    //   case 'child-3':
+    //     this.inputData3 = value
+    //     break;
+    //   case 'child-4':
+    //     this.inputData4 = value
+    //     break;
+    //   default:
+    //     break;
+    // }
   }
 
-  // cheak(){
-  //   if(this.ng){
-
-  //   }
+  // child1($event: any) {
+  //   this.service.updatechild1($event)
   // }
 
-  // updateChild2($event: any) {
-  //   this.message = $event
-  // }
+  OnButtonCLick(): void {
+    // this.isChildShow = false;
+    this.data = { child : this.selectChild, color: this.value};
 
-
+    // this.isChildShow = true;
+  }
 }

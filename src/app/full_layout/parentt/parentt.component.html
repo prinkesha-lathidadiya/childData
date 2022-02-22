@@ -12,25 +12,28 @@
         </div>
         <div>
             <label for="website">Child:</label>
-            <select>
-                <!-- <option>Choose Child</option>
-                <option [(ngModel)]="child1"> Child1</option>
-                <option [(ngModel)]="child2"> Child2</option>
-                <option [(ngModel)]="child3"> Child3</option>
-                <option [(ngModel)]="child4"> Child4</option> -->
+            <select name="" (change)="changeValue($event)" >
                 <option>Choose Child</option>
-                <option> Child1</option>
-                <option> Child2</option>
-                <option> Child3</option>
-                <option> Child4</option>
+                <option value="child-1"> Child1</option>
+                <option value="child-2"> Child2</option>
+                <option value="child-3"> Child3</option>
+                <option  value="child-4"> Child4</option>
             </select>
-        </div>      
+        </div> 
+        <div class="">
+            <button class="bnnt btn btn-danger" (click)="OnButtonCLick()">Click Me</button>  
+
+        </div>   
     </div> 
   
     <div>
-        <app-child1 [child1]="child1"></app-child1>
-        <app-child2 [child2]="child2"></app-child2>
-        <app-child3 [child3]="child3"></app-child3>
-        <app-child4 [child4]="child4"></app-child4> 
+        <!-- <app-child1 [inputData1]="inputData1" [inputData2]="inputData2" [inputData3]="inputData3"  [inputData4]="inputData4"></app-child1> -->
+        <!-- <app-child1 [DataValue]="data" *ngIf="isChildShow"></app-child1>
+        <app-child2 [DataValue]="data" *ngIf="isChildShow"></app-child2> -->
+        <app-child1 [DataValue]="data"></app-child1><br>
+         <app-child2 [DataValue]="data"></app-child2><br>
+        <app-child3 [DataValue]="data"></app-child3><br>
+        <app-child4 [DataValue]="data"></app-child4><br>
     </div>
+  
 
