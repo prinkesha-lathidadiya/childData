@@ -1,7 +1,7 @@
 .bttn{
     font-size: 21px;
     border: none;
-    padding: 26px 148px;
+    padding: 31px 189px;
     margin-bottom: 5px;
 }
 .parent_main{
@@ -17,6 +17,9 @@
     background-color: grey;
     color: white;
    
+}
+.span{
+    font-size: 20px;
 }
 .pink{
     background-color: rgb(255,189,222);
@@ -48,4 +51,16 @@
     color: black;
     background-color: #fff;
     border: 1px solid black;
+}
+.sub{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.sub_1{
+    display: flex;
+}
+.sub_2{
+    display: flex;
 }

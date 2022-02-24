@@ -8,10 +8,12 @@
             <button type="button" class="btn bttn pink" name="pink" [value]="value" (click)="changed4()"></button>  
         </div>
         <div class="span_m">
-            <span>Seleted Color:{{value}}</span>
+            <span class="span">Seleted Color:{{value}}</span>
         </div>
+
+
         <div>
-            <label for="website">Child:</label>
+            <label for="website" class="span">Select Child: </label>
             <select name="" (change)="changeValue($event)" >
                 <option>Choose Child</option>
                 <option value="child-1"> Child1</option>
@@ -20,20 +22,33 @@
                 <option  value="child-4"> Child4</option>
             </select>
         </div> 
-        <div class="">
-            <button class="bnnt btn btn-danger" (click)="OnButtonCLick()">Click Me</button>  
-
-        </div>   
+        <div>
+            <button class="bnnt btn btn-danger" (click)="OnButtonCLick()">Click Me</button>  <br>
+        </div>
+          
     </div> 
   
-    <div>
-        <!-- <app-child1 [inputData1]="inputData1" [inputData2]="inputData2" [inputData3]="inputData3"  [inputData4]="inputData4"></app-child1> -->
-        <!-- <app-child1 [DataValue]="data" *ngIf="isChildShow"></app-child1>
-        <app-child2 [DataValue]="data" *ngIf="isChildShow"></app-child2> -->
-        <app-child1 [DataValue]="data"></app-child1><br>
-         <app-child2 [DataValue]="data"></app-child2><br>
-        <app-child3 [DataValue]="data"></app-child3><br>
-        <app-child4 [DataValue]="data"></app-child4><br>
+    <div class="sub">   
+        <div class="sub_1">
+            <div>
+                <app-child1 [DataValue]="data" (valueUpdate1)="updateChild1($event)"></app-child1><br>
+            </div>
+            <div>
+                <app-child2 [DataValue]="data" (valueUpdate2)="updateChild2($event)"></app-child2><br>
+            </div>
+        </div>
+        <div class="sub_2">
+            <div>
+                <app-child3 [DataValue]="data" (valueUpdate3)="updateChild3($event)"></app-child3><br>
+            </div>
+            <div>
+                <app-child4 [DataValue]="data" (valueUpdate4)="updateChild4($event)"></app-child4><br>
+            </div>
+        </div>
     </div>
+    </div>
+
+
+     
   
 

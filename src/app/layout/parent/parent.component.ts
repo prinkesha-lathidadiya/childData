@@ -22,7 +22,7 @@ export class ParentComponent implements OnInit {
   }
   getUpdatedvalue(value: any) {
     // console.log($event);  
-    debugger
+   
     this.Total = value;
   }
 

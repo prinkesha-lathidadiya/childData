@@ -1,5 +1,18 @@
 <div class="c3_main">
-    <div class="c3" id="c3" >
+    <div class="c3" id="c3">
+        <div>
+            <label for="website">Select Child 3:</label>
+            <select name="" (change)="changeValue($event)">
+                <option>Choose Child</option>
+                <option value="child-1"> Child1</option>
+                <option value="child-2"> Child2</option>
+                <option value="child-4"> Child4</option>
+            </select>
+        </div>
+        <div class="">
+            <button class="bnnt btn btn-danger" (click)="onUpdate($event)">Click Me</button>
+
+        </div>
     </div>
-    
+
 </div>

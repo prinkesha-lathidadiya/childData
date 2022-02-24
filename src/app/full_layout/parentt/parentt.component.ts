@@ -6,26 +6,23 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./parentt.component.css']
 })
 export class ParenttComponent implements OnInit {
-  value: string = '';
+  value: any = '';
   red: string = 'red';
   gray: string = 'gray';
   yellow: string = 'yellow';
   pink: string = 'pink';
-  data1 = {};
-  data = {};
-
-  isChildShow = true;
   selectChild = '';
-  inputData1: string = ''
-  inputData2: string = ''
-  inputData3: string = ''
-  inputData4: string = ''
+  selectChild4 = ''
+  selectChild3=''
+  selectChild2=''
+  selectChild1=''
+  data = {};
+  data4 = {}
+  data3 = {}
+  data2 = {}
+  data1 = {}
 
-  constructor() {
-    // this.service.child1.subscribe((res: any) => {
-    //   this.data = res
-    // })
-  }
+  constructor() {  }
 
   ngOnInit(): void {
   }
@@ -41,35 +38,42 @@ export class ParenttComponent implements OnInit {
   changed4() {
     this.value = 'pink';
   }
+
   changeValue($event: any) {
     const value = $event.target.value;
     this.selectChild = $event.target.value;
-    // switch (value) {
-    //   case 'child-1':
-    //     this.inputData1 = value
-    //     break;
-    //   case 'child-2':
-    //     this.inputData2 = value
-    //     break;
-    //   case 'child-3':
-    //     this.inputData3 = value
-    //     break;
-    //   case 'child-4':
-    //     this.inputData4 = value
-    //     break;
-    //   default:
-    //     break;
-    // }
   }
-
-  // child1($event: any) {
-  //   this.service.updatechild1($event)
-  // }
 
   OnButtonCLick(): void {
-    // this.isChildShow = false;
-    this.data = { child : this.selectChild, color: this.value};
-
-    // this.isChildShow = true;
+    this.data = { child: this.selectChild, color: this.value };
   }
+
+  updateChild1(e: any) {
+    debugger
+    this.selectChild1 = e
+    this.data = { child: this.selectChild1, color: this.value };
+    console.log('child1parent', this.data)
+  }
+
+  updateChild2(e: any) {
+    
+    this.selectChild2 = e
+    this.data = { child: this.selectChild2, color: this.value };
+    console.log('child2parent', this.data2)
+  }
+
+  updateChild3(e: any) {
+    this.selectChild3 = e
+    this.data = { child: this.selectChild3, color: this.value };
+    console.log('child3parent', this.data3)
+  }
+
+  updateChild4(e: any) {
+    this.selectChild4 = e
+    this.data = { child: this.selectChild4, color: this.value };
+    console.log('child4parent', this.data4)
+  }
+
 }
+
+

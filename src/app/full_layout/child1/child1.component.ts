@@ -8,21 +8,19 @@ import { AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Outpu
 export class Child1Component implements OnInit, AfterViewInit, OnChanges {
  
   @Input() DataValue: any = {};
+  @Output()valueUpdate1 = new EventEmitter();
+  selectChild1 = '';
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-  ngAfterViewInit(): void {
+  ngOnInit(): void {}
 
-
-  }
+  ngAfterViewInit(): void {}
 
   ngOnChanges(changes: SimpleChanges): void {
     if(this.DataValue && this.DataValue != ""){
       this.SetColor();
-    }
-   
+    } 
   }
 
   SetColor(){
@@ -33,5 +31,14 @@ export class Child1Component implements OnInit, AfterViewInit, OnChanges {
     else{
       emement.style.backgroundColor = 'transparent';
     } 
+  }
+  changeValue($event: any) {
+    this.selectChild1 = $event.target.value;
+    }
+
+  onUpdate(e: any) {
+    this.selectChild1
+    this.valueUpdate1.emit(this.selectChild1)
+    console.log('hell1',this.selectChild1)  
   }
 }

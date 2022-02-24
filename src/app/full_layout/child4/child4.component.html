@@ -1,2 +1,15 @@
-<div class="c1" id="c4" >
+<div class="c1" id="c4">
+    <div>
+        <label for="website">Select Child 4:</label>
+        <select name="" (change)="changeChild($event)">
+            <option>Choose Child</option>
+            <option value="child-1"> Child1</option>
+            <option value="child-2"> Child2</option>
+            <option value="child-3"> Child3</option>
+        </select>
+    </div>
+    <div class="">
+        <button class="bnnt btn btn-danger" (click)="onUpdate($event)">Click Me</button>
+
+    </div>
 </div>
