@@ -1,0 +1,104 @@
+<!----------- charater change lowercase----------- -->
+<p>Lowercase==={{ 'MANASVI' | lowercase }}</p>
+
+<!----------- charater change uppercase----------- -->
+<p>Uppercase==={{ namee | uppercase }}</p>
+
+<!----------- date----------- -->
+<p>ShortDate==={{todaydate | date:'short'}}</p>
+<p>LongDate==={{todaydate | date:'longDate'}}</p>
+<p>Date==={{todaydate | date:'MMM d, y'}}</p>
+<p>Time==={{todaydate | date:'h:mm a'}}</p>
+<p>LongTime==={{todaydate | date:'MMMM d, y, h:mm:ss a z'}}</p>
+<p>Time==={{todaydate | date:'M/d/yy, h:mm a'}}</p>
+<p>Time==={{todaydate | date:'EEEE, MMMM d, y'}}</p>
+<p>DateTime as string ==={{todayString}} datepipe:{{todayString | date}}</p>
+
+
+<!----------- change currency----------- -->
+<p>currency==={{65654654689.23 | currency:"USD"}}</p>
+<p>currency==={{65654654689.23 | currency:"INR"}}</p>
+<p>currency==={{65654654689.23 | currency:"CNY"}}</p>
+<p>currency==={{value | currency:"ADP":"symbol"}}</p>
+<p>currency==={{value | currency:"CZK":"symbol"}}</p>
+<p>currency==={{value | currency:"GIP":"symbol"}}</p>
+<p>currency==={{value | currency:"GEL":"symbol"}}</p>
+<p>currency==={{value | currency:"UAH":"symbol"}}</p>
+
+
+<!----------- change string---------- -->
+<p>String==={{ dataObj | json }}</p>
+
+<!----------- charater remove----------- -->
+<p>Data==={{ data | slice:2:7 }}</p>
+
+<li *ngFor="let name of userList | filter : includeText">
+    {{name}}
+</li>
+
+<!----------- particular charter remove----------- -->
+<div>
+    Enter The string:
+    <input type="text" [(ngModel)]="namevalue" class="input">
+</div>
+<p>Output: {{namevalue | custom }} </p>
+
+<!----------- charater revers----------- -->
+<h2>
+  reverse
+</h2>
+<h4>
+    The reverse of string is {{ "string" | revers}}
+</h4>
+<h4>
+    The reverse of string is Updercase {{ "string" | revers | uppercase}}
+</h4>
+
+
+<h2>How to Pass Multiple Parameters to Pipe in Angular</h2>
+    
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Website</th>
+    <th>Desc</th>
+  </tr>
+  <tr *ngFor="let person of persons">
+    <td>{{ person.id }}</td>
+    <td>{{ person.name }}</td>
+    <td>{{ person.website }}</td>
+    <td>{{ person.desc | descPipe: person.id : person.name : person.website  }}</td>
+  </tr>
+</table>
+<br>
+<br>
+<h2>Serch UserList</h2>
+
+<input type="text" placeholder="name" [(ngModel)]="nameSearch"> | 
+<input type="text" placeholder="email" [(ngModel)]="emailSearch"> | 
+<input type="text" placeholder="role" [(ngModel)]="roleSearch"> | 
+<input type="text" placeholder="account" [(ngModel)]="accountSearch">
+<br>
+<hr>
+<br>
+<table border="1">
+  <thead>
+    <td>Display Name</td>
+    <td>Name</td>
+    <td>Email</td>
+    <td>Role</td>
+    <td>Account</td>
+    <td>Description</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of data1 | serchUser: nameSearch: emailSearch: roleSearch: accountSearch">
+      <td>{{ user.displayName }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.role }}</td>
+      <td>{{ user.account }}</td>
+      <td>{{ user.description }}</td>
+    </tr>
+  </tbody>
+</table>
