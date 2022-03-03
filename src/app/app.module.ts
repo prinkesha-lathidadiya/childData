@@ -15,10 +15,14 @@ import { Child4Component } from './full_layout/child4/child4.component';
 import { AngularPipesComponent } from './angular-pipes/angular-pipes.component';
 import { CustomPipe } from './pipes/custom.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
-import { ApiCrudComponent } from './api-crud/api-crud.component';
 import { ReversPipe } from './pipes/revers.pipe';
 import { DescPipePipe } from './pipes/desc-pipe.pipe';
 import { SerchUserPipe } from './pipes/serch-user.pipe';
+import { KhonetxtComponent } from './khonetxt/khonetxt.component';
+import { LandingpageComponent } from './template/landingpage/landingpage.component';
+import { FooterComponent } from './template/footer/footer.component';
+import { OurpartnersComponent } from './template/ourpartners/ourpartners.component';
+
 
 @NgModule({
   declarations: [
@@ -33,10 +37,13 @@ import { SerchUserPipe } from './pipes/serch-user.pipe';
     AngularPipesComponent,
     CustomPipe,
     FilterPipe,
-    ApiCrudComponent,
     ReversPipe,
     DescPipePipe,
-    SerchUserPipe
+    SerchUserPipe,
+    KhonetxtComponent,
+    LandingpageComponent,
+    FooterComponent,
+    OurpartnersComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+a{
+    text-decoration: none;
+    color: pink;
+}
+.grey{
+    color: white;
+    background-color: black;
+    /* padding: 109px 98px 58px 98px; */
+}
+.last{
+    margin-left: 65%;
+}
+.space{
+    margin-left: 133px;
+}
+.greyy{
+    color: grey;
+}
+.font{
+    font-size: 14px;
+}
